@@ -896,3 +896,347 @@ galleryFilter.addEventListener(
 );
 
 
+
+//==================================================
+// GALLERY ANIMATION
+//==================================================
+
+function animateGallery(items) {
+
+    const cards =
+        document.querySelectorAll(
+            ".gallery-item"
+        );
+
+
+    cards.forEach(card => {
+
+        card.classList.remove("show");
+
+    });
+
+
+    setTimeout(() => {
+
+        renderGallery(items);
+
+    }, 250);
+
+}
+
+
+//==================================================
+// VIEWER
+//==================================================
+
+let currentIndex = 0;
+
+
+const viewer =
+    document.getElementById("viewer");
+
+const viewerImg =
+    document.getElementById("viewerImg");
+
+const viewerClose =
+    document.getElementById("viewerClose");
+
+const viewerPrev =
+    document.getElementById("viewerPrev");
+
+const viewerNext =
+    document.getElementById("viewerNext");
+
+
+//==================================================
+// OPEN VIEWER
+//==================================================
+
+galleryGrid.addEventListener(
+    "click",
+    (e) => {
+
+        const card =
+            e.target.closest(".gallery-item");
+
+        if (!card) return;
+
+
+        const index =
+            Number(card.dataset.index);
+
+
+        /*
+        currentItems هي القائمة
+        التي تظهر فعلياً على الشاشة.
+        */
+
+        if (
+            Number.isNaN(index) ||
+            !currentItems[index]
+        ) {
+
+            return;
+
+        }
+
+
+        currentIndex =
+            index;
+
+
+        const item =
+            currentItems[currentIndex];
+
+
+        const lang =
+            localStorage.getItem("lang") || "ar";
+
+
+        viewerImg.src =
+            item.image;
+
+
+        document.getElementById(
+            "viewerTitle"
+        ).textContent =
+            item.title[lang];
+
+
+        document.getElementById(
+            "viewerCategory"
+        ).textContent =
+            item.category[lang];
+
+
+        document.getElementById(
+            "viewerDescription"
+        ).textContent =
+            item.date[lang];
+
+
+        viewer.classList.add(
+            "active"
+        );
+
+    }
+);
+
+
+//==================================================
+// CLOSE VIEWER
+//==================================================
+
+viewerClose.addEventListener(
+    "click",
+    () => {
+
+        viewer.classList.remove(
+            "active"
+        );
+
+    }
+);
+
+
+viewer.addEventListener(
+    "click",
+    (e) => {
+
+        if (e.target === viewer) {
+
+            viewer.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+);
+
+
+//==================================================
+// UPDATE VIEWER
+//==================================================
+
+function updateViewer() {
+
+    if (
+        !currentItems.length ||
+        !currentItems[currentIndex]
+    ) {
+
+        return;
+
+    }
+
+
+    const item =
+        currentItems[currentIndex];
+
+
+    const lang =
+        localStorage.getItem("lang") || "ar";
+
+
+    viewerImg.style.opacity =
+        "0";
+
+
+    viewerImg.onload = () => {
+
+        viewerImg.style.opacity =
+            "1";
+
+    };
+
+
+    viewerImg.src =
+        item.image;
+
+
+    document.getElementById(
+        "viewerTitle"
+    ).textContent =
+        item.title[lang];
+
+
+    document.getElementById(
+        "viewerCategory"
+    ).textContent =
+        item.category[lang];
+
+
+    document.getElementById(
+        "viewerDescription"
+    ).textContent =
+        item.date[lang];
+
+}
+
+
+//==================================================
+// NEXT
+//==================================================
+
+viewerNext.addEventListener(
+    "click",
+    () => {
+
+        if (!currentItems.length) return;
+
+
+        currentIndex++;
+
+
+        if (
+            currentIndex >=
+            currentItems.length
+        ) {
+
+            currentIndex = 0;
+
+        }
+
+
+        updateViewer();
+
+    }
+);
+
+
+//==================================================
+// PREVIOUS
+//==================================================
+
+viewerPrev.addEventListener(
+    "click",
+    () => {
+
+        if (!currentItems.length) return;
+
+
+        currentIndex--;
+
+
+        if (currentIndex < 0) {
+
+            currentIndex =
+                currentItems.length - 1;
+
+        }
+
+
+        updateViewer();
+
+    }
+);
+
+
+//==================================================
+// APPLY LANGUAGE
+//==================================================
+
+applyGalleryLang();
+
+
+//==================================================
+// CARD HOVER EFFECT
+//==================================================
+
+function applyCardHover() {
+
+    document
+        .querySelectorAll(".gallery-item")
+        .forEach(card => {
+
+            card.addEventListener(
+                "mousemove",
+                (e) => {
+
+                    const rect =
+                        card.getBoundingClientRect();
+
+
+                    const x =
+                        (
+                            e.clientX -
+                            rect.left -
+                            rect.width / 2
+                        ) / 20;
+
+
+                    const y =
+                        (
+                            e.clientY -
+                            rect.top -
+                            rect.height / 2
+                        ) / 20;
+
+
+                    card.style.transform =
+                        `perspective(800px)
+                         rotateY(${x}deg)
+                         rotateX(${-y}deg)
+                         scale(1.02)`;
+
+                }
+            );
+
+
+            card.addEventListener(
+                "mouseleave",
+                () => {
+
+                    card.style.transform =
+                        "perspective(800px) rotateY(0) rotateX(0) scale(1)";
+
+                }
+            );
+
+        });
+
+}
+
+
+applyCardHover();

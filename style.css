@@ -1586,3 +1586,32 @@ body.dark .footer-box{
 
     font-weight:400;
 }
+
+/* ================= MOBILE HERO FIX ================= */
+/* تعديل اللوجو ومحتوى الصفحة الرئيسية للتلفون فقط */
+
+@media (max-width:768px){
+
+    .hero{
+        min-height:100vh;
+        height:auto;
+
+        /* مساحة آمنة أسفل الناف */
+        padding-top:150px;
+        padding-bottom:80px;
+
+        justify-content:flex-start;
+    }
+
+    .logo-wrapper{
+        width:160px;
+        height:160px;
+
+        flex-shrink:0;
+    }
+
+    .main-logo{
+        width:160px;
+    }
+
+}
