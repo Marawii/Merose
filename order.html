@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الطلبات | ميروز</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="order.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- الخلفية -->
+
+<div class="bg-layer"></div>
+<div class="bg-shine"></div>
+
+
+<!-- NAVBAR -->
+
+<nav class="nav">
+
+<button class="menu-btn" id="menuBtn">
+
+☰
+
+</button>
+
+<div class="nav-links">
+
+<a href="index.html" data-key="home">
+الرئيسية
+</a>
+
+<a href="design.html" data-key="designs">
+التصاميم
+</a>
+
+<a href="order.html" data-key="order" class="active">
+الطلبات
+</a>
+
+<a href="about.html" data-key="about">
+عنا
+</a>
+
+</div>
+
+<button class="lang-btn" onclick="toggleLang()">
+EN
+</button>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="order-hero">
+    
+<!-- شريط التقدم -->
+
+<section class="order-steps">
+
+    <div class="step active">
+
+        <div class="step-dot"></div>
+
+        <p data-key="stepService">الخدمة</p>
+
+    </div>
+
+
+    <div class="step-line"></div>
+
+
+    <div class="step">
+
+        <div class="step-dot"></div>
+
+        <p data-key="stepDetails">التفاصيل</p>
+
+    </div>
+
+
+    <div class="step-line"></div>
+
+
+    <div class="step">
+
+        <div class="step-dot"></div>
+
+        <p data-key="stepFiles">الملفات</p>
+
+    </div>
+
+
+    <div class="step-line"></div>
+
+
+    <div class="step">
+
+        <div class="step-dot"></div>
+
+        <p data-key="stepContact">التواصل</p>
+
+    </div>
+
+</section>
+
+
+
+
+
+</section>
+
+
+
+<!-- اختيار الخدمة -->
+
+<section class="service-section">
+
+   <h2 class="section-title" data-key="servicesTitle">
+    الخدمات
+</h2>
+
+<p data-key="servicesDescription">
+    شاركنا فكرتك، وسنعمل على تحويلها إلى تصميم يليق بها
+</p>
+
+    <div class="service-grid">
+
+        <!-- 1 : هوية بصرية -->
+        <div class="service-card" data-service="branding">
+
+            <div class="service-circle">
+                <i class="fa-solid fa-palette"></i>
+            </div>
+
+           <h3 data-key="brandingName">هوية بصرية</h3>
+
+<span data-key="brandingDesc">
+    شعار • ألوان • هوية متكاملة
+</span>
+
+        </div>
+
+
+        <!-- 2 : دعوة -->
+        <div class="service-card" data-service="invitation">
+
+            <div class="service-circle">
+                <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+
+            <h3 data-key="invitationName">دعوة</h3>
+
+<span data-key="invitationDesc">
+    دعوات رقمية ومطبوعة
+</span>
+
+        </div>
+
+
+        <!-- 3 : مونتاج -->
+        <div class="service-card" data-service="editing">
+
+            <div class="service-circle">
+                <i class="fa-solid fa-film"></i>
+            </div>
+
+            <h3 data-key="editingName">مونتاج</h3>
+
+<span data-key="editingDesc">
+    فيديوهات وموشن جرافيك
+</span>
+
+        </div>
+
+
+        <!-- 4 : ذكاء اصطناعي -->
+        <div class="service-card" data-service="ai">
+
+            <div class="service-circle">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+
+       <h3 data-key="aiName">ذكاء اصطناعي</h3>
+
+<span data-key="aiDesc">
+    تصاميم وصور إبداعية
+</span>
+
+        </div>
+
+
+        <!-- 5 : سوشال ميديا -->
+        <div class="service-card" data-service="social">
+
+            <div class="service-circle">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+
+            <h3 data-key="socialName">سوشال ميديا</h3>
+
+<span data-key="socialDesc">
+    منشورات وقوالب احترافية
+</span>
+
+        </div>
+
+
+        <!-- 6 : أخرى -->
+        <div class="service-card" data-service="other">
+
+            <div class="service-circle">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+           <h3 data-key="otherName">أخرى</h3>
+
+<span data-key="otherDesc">
+    فكرة أو خدمة مختلفة
+</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="wizard-stage">
+
+    <!-- ================= STEP 1 : التفاصيل ================= -->
+
+    <div class="wizard-step">
+
+<h2 class="section-title" data-key="detailsTitle">
+    التفاصيل
+</h2>
+        <div class="selected-service">
+
+            <i id="selectedServiceIcon"
+               class="fa-solid fa-palette">
+            </i>
+
+            <span class="selected-service-name">
+    اختيارك: هوية بصرية
+</span>
+
+        </div>
+
+<p id="detailsHint" class="details-title">
+    صف لنا فكرتك، وسنعمل على تحويلها إلى تصميم يليق بها.
+</p>
+
+        <textarea
+    id="orderText"
+    data-key-placeholder="orderPlaceholder"
+    placeholder="اكتب تفاصيل فكرتك هنا..."
+></textarea>
+
+        <p id="detailsError" class="error-msg"></p>
+        
+<div class="details-tip" data-key="detailsTip">
+
+    كلما وصفت فكرتك بشكل أوضح،
+    استطعنا تنفيذها بصورة أقرب لما تتخيله.
+
+</div>
+
+        <div class="wizard-buttons">
+
+            <button
+                type="button"
+                class="back-btn"
+                id="backService">
+                <span data-key="back">
+               → السابق </span>
+            </button>
+
+            <button
+                type="button"
+                class="next-btn"
+                id="toUpload">
+                <span data-key="next">
+              التالي ← 
+              </span>           
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= STEP 2 : الملفات ================= -->
+
+    <div class="wizard-step">
+
+        <h2 class="section-title" data-key="filesTitle">
+    الملفات
+</h2>
+
+
+        <p class="details-title" data-key="filesDescription">
+    يمكنك إرفاق الشعار، الصور، أو أي ملفات تساعدنا
+    على فهم فكرتك بشكل أفضل.
+</p>
+
+
+        <div class="upload-box">
+
+            <input
+                type="file"
+                id="uploadInput"
+                multiple
+                hidden
+            >
+
+
+            <div class="upload-content">
+
+                <div class="upload-icon">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+
+
+               <h3 id="uploadTitle" data-key="uploadTitle">
+    اسحب الملفات هنا
+</h3>
+
+<p data-key="uploadClick">
+    أو اضغط لاختيار الملفات
+</p>
+
+
+                <span class="upload-note">
+                    PNG • JPG • PDF • MP4
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="fileList"
+            class="file-list">
+        </div>
+
+
+        <div class="wizard-buttons">
+
+            <button
+                type="button"
+                class="back-btn"
+                id="backDetails">
+          <span data-key="back">
+               → السابق </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="next-btn"
+                id="toContact">
+            <span data-key="next">
+              التالي ← 
+              </span>
+            </button>
+
+        </div>
+
+    </div>
+
+<!-- ================= STEP 3 : التواصل ================= -->
+
+<div class="wizard-step">
+
+
+   <h2 class="section-title" data-key="contactTitle">
+    التواصل
+</h2>
+
+
+    <p class="details-title" data-key="contactDescription">
+    سنستخدم هذه المعلومات فقط للتواصل معك
+    بخصوص فكرتك.
+</p>
+
+
+    <div class="glass-form">
+
+        <div class="form-group">
+
+            <label for="customerName" data-key="nameLabel">
+    الاسم
+</label>
+
+            <input
+    id="customerName"
+    type="text"
+    data-key-placeholder="namePlaceholder"
+    placeholder="اكتب اسمك"
+>
+
+            <span
+                id="nameError"
+                class="error-msg">
+            </span>
+
+        </div>
+
+
+        <div class="form-group">
+
+           <label for="customerPhone" data-key="phoneLabel">
+    رقم الواتساب
+</label>
+
+          <input
+    id="customerPhone"
+    type="tel"
+    data-key-placeholder="phonePlaceholder"
+    placeholder="+968"
+>
+
+            <span
+                id="phoneError"
+                class="error-msg">
+            </span>
+
+        </div>
+
+
+        <div class="wizard-buttons">
+
+            <button
+                type="button"
+                class="back-btn"
+                id="backUpload">
+            <span data-key="back">
+               → السابق </span>
+            </button>
+
+            <button
+    type="button"
+    class="send-btn"
+    data-key="sendOrder">
+     إرسال إلى ميروز
+</button>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+<!-- SCRIPTS -->
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="script.js"></script>
+
+<script src="order.js"></script>
+
+
+
+<!-- ================= نافذة النجاح ================= -->
+
+<div
+class="success-popup"
+id="successPopup"
+>
+
+<div class="success-card">
+
+
+<div class="success-icon">
+
+✓
+
+</div>
+
+<img
+    id="successLogo"
+    src="images/logo-ar.png"
+    alt="ميروز"
+    class="success-logo"
+> 
+
+
+<p data-key="successMessage">
+    تم استلام طلبك بنجاح، وسنعمل على تحويل فكرتك إلى تصميم يليق بها.
+    <br><br>
+    سنتواصل معك قريبًا عبر الواتساب لمناقشة التفاصيل والبدء في التنفيذ.
+    <br><br>
+    شكرًا لثقتك بنا ..
+</p>
+
+
+<div class="success-buttons">
+
+
+<a href="index.html" data-key="backHome">
+    العودة للرئيسية
+</a>
+
+
+<a
+    href="https://wa.me/968XXXXXXXX"
+    target="_blank"
+    data-key="contactWhatsApp">
+    التواصل عبر واتساب
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="footer-box">
+
+
+<div class="footer-top">
+
+<p
+class="footer-text"
+data-key="footerText"
+>
+
+برقة الورد نصنع لحظات خالدة
+
+</p>
+
+</div>
+
+
+<span
+class="footer-copy"
+data-key="footerCopy"
+>
+
+© 2026 ميروز
+
+</span>
+
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>

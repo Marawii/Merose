@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>الرئيسية</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 🌍 الخلفية المتغيرة -->
+<div class="bg-layer"></div>
+<div class="bg-shine"></div>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+
+<button class="menu-btn" id="menuBtn">
+
+☰
+
+</button>
+
+<div class="nav-links">
+<a href="index.html" data-key="home" class="active">الرئيسية</a>
+<a href="design.html" data-key="designs">التصاميم</a>
+<a href="order.html" data-key="order"> الطلبات </a>
+<a href="about.html" data-key="about">عنا</a>
+</div>
+
+<button class="lang-btn" onclick="toggleLang()">EN</button>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+  <!-- 🔥 اللوجو المتغير -->
+  <div class="logo-wrapper fade-up">
+    <img src="images/logo-ar.png" class="main-logo" alt="logo">
+</div>
+
+  <!-- النص -->
+  <h2 class="hero-sub" data-key="hero">
+    برقة الورد نصنع لحظات خالدة
+  </h2>
+
+  <!-- BOXES -->
+  <div class="home-boxes fade-up delay-2">
+
+   <a href="design.html" class="box">
+    <i data-lucide="palette" class="box-icon"></i>
+    <span data-key="designs">التصاميم</span>
+</a>
+
+<a href="#" class="box">
+    <i data-lucide="shopping-bag" class="box-icon"></i>
+    <span data-key="order">الطلبات</span>
+</a>
+
+<div class="box" id="aiBox">
+
+    <i data-lucide="sparkles" class="box-icon"></i>
+
+    <span data-key="aiGenerator">
+        مولّد الصور بالذكاء الاصطناعي
+    </span>
+
+</div>
+  </div>
+
+  <!-- ================= AI SERVICE INFO ================= -->
+
+<div class="ai-service-info" id="aiServiceInfo">
+
+    <h3 data-key="comingSoon">
+قريبًا
+    </h3>
+
+   <p data-key="aiServiceText">
+    ستتوفر خدمة جديدة، "خدمة توليد الصور بالذكاء الاصطناعي"،
+    تتيح لك إنشاء صور مميزة بطريقة سهلة ومبتكرة،
+    لتساعدك على تحويل أفكارك إلى تصاميم تحمل لمستك الخاصة.
+</p>
+</div>
+
+</section>
+<div class="theme-switch" onclick="toggleTheme()">
+
+    <div class="theme-slider"></div>
+
+    <i data-lucide="sun" class="light-icon"></i>
+
+    <i data-lucide="moon" class="dark-icon"></i>
+
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="script.js"></script>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-box">
+
+        <div class="footer-top">
+
+            <p class="footer-text" data-key="footerText">
+    برقة الورد نصنع لحظات خالدة
+</p>
+</div>
+<span class="footer-copy" data-key="footerCopy">
+    © 2026 ميروز
+</span>
+
+    </div>
+
+</footer>
+</body>
+</html>

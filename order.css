@@ -1,0 +1,1756 @@
+/*================ HERO =================*/
+.order-hero{
+
+padding:110px 20px 25px;
+
+text-align:center;
+
+opacity:0;
+
+transform:translateY(40px);
+
+animation:heroFade 1s ease forwards;
+
+}
+
+
+.order-hero p{
+
+font-size:20px;
+
+opacity:.82;
+
+max-width:650px;
+
+margin:auto;
+
+line-height:1px;
+
+}
+
+
+/*================ steps =================*/
+.order-steps{
+
+max-width:850px;
+
+margin:15px auto 25px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.step{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:10px;
+
+}
+.step-dot{
+
+    width:20px;
+
+    height:20px;
+
+    background:transparent;
+
+    border:none;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+.step-dot::before{
+
+    content:"♡";
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:24px;
+
+    line-height:1;
+
+    color:rgba(183,121,55,.35);
+
+    transition:.35s;
+
+}
+
+.step p{
+
+font-size:13px;
+
+opacity:.65;
+
+}
+
+.step-line{
+
+width:65px;
+
+height:1px;
+
+background:rgba(255,255,255,.10);
+
+margin:0 18px;
+
+}
+.step.active .step-dot{
+
+    transform:scale(1.15);
+
+}
+
+.step.active .step-dot::before{
+
+    content:"♥";
+
+    color:var(--primary);
+
+    text-shadow:
+        0 0 10px rgba(183,121,55,.45),
+        0 0 20px rgba(183,121,55,.25);
+
+}
+
+.step.active p{
+
+color:var(--primary);
+
+opacity:1;
+
+}
+
+/*================ SERVICES =================*/
+
+.service-section {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px 20px 90px;
+
+    text-align: center;
+
+}
+
+
+/* العنوان */
+
+.service-section h2 {
+
+    font-size: 34px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* الوصف */
+
+.service-section > p {
+
+    opacity: .7;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ================= بوكس الخدمات الكبير ================= */
+
+.service-box {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 36px;
+
+    box-sizing: border-box;
+
+    border-radius: 32px;
+
+    background: rgba(255,255,255,.05);
+
+    border: 1px solid rgba(183,121,55,.18);
+
+    backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.12);
+
+    overflow: hidden;
+
+}
+
+
+/* لمعة البوكس الكبير */
+
+.service-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 45%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+    transition: .9s;
+
+    pointer-events: none;
+
+}
+
+
+.service-box:hover::before {
+
+    left: 180%;
+
+}
+
+
+/* ================= شبكة الخدمات ================= */
+
+.service-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 220px);
+    justify-content: center;
+    gap: 16px;
+
+}
+
+
+/* ================= بطاقة الخدمة ================= */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 125px;
+    padding: 16px 12px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background: rgba(255,255,255,.045);
+    border: 1px solid rgba(183,121,55,.16);
+    backdrop-filter: blur(18px);
+    cursor: pointer;
+    transition:
+        transform .35s cubic-bezier(.22,1,.36,1),
+        box-shadow .35s ease,
+        border-color .35s ease,
+        background .35s ease;
+}
+
+/* لمعة البطاقة */
+
+.service-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.16),
+            transparent
+        );
+
+    transition: .8s;
+
+    pointer-events: none;
+
+}
+
+
+.service-card:hover::before {
+
+    left: 170%;
+
+}
+
+
+/* Hover */
+
+.service-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: var(--primary);
+
+    background: rgba(183,121,55,.07);
+
+    box-shadow:
+        0 18px 45px rgba(183,121,55,.16);
+
+}
+
+
+/* ================= دائرة الأيقونة ================= */
+
+.service-circle {
+    width: 44px;
+height: 44px;
+margin: 0 auto 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(183,121,55,.18);
+
+    transition: .35s;
+}
+
+.service-circle i {
+font-size: 19px;
+}
+
+.service-card:hover .service-circle {
+
+    transform: scale(1.08);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 18px rgba(183,121,55,.20);
+
+}
+
+
+/* ================= اسم الخدمة ================= */
+
+.service-card h3 {
+
+    margin: 0 0 2px;
+
+    font-size: 15px;
+
+    color: var(--primary);
+
+}
+
+
+/* وصف الخدمة */
+
+.service-card span {
+
+    display: block;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    opacity: .68;
+
+}
+
+
+/* ================= الخدمة المختارة ================= */
+
+.service-card.active {
+
+    border-color: var(--primary);
+
+    background: rgba(183,121,55,.10);
+
+    box-shadow:
+        0 0 40px rgba(183,121,55,.20);
+
+    transform: translateY(-4px) scale(1.02);
+
+    z-index: 2;
+
+}
+
+
+.service-card.active .service-circle {
+
+    background: rgba(183,121,55,.18);
+
+    border-color: var(--primary);
+
+}
+
+
+/* ================= إخفاء الخدمات بعد الاختيار ================= */
+
+.service-card.fade-out {
+
+    opacity: 0;
+
+    transform:
+        scale(.88)
+        translateY(20px);
+
+    filter: blur(3px);
+
+    pointer-events: none;
+
+}
+
+
+/* ================= موبايل ================= */
+
+@media (max-width: 768px) {
+
+    .service-box {
+
+        padding: 22px;
+
+        border-radius: 26px;
+
+    }
+
+
+    .service-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .service-card {
+        min-height: 115px;
+        padding: 14px 8px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .service-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .service-box {
+
+        padding: 16px;
+
+    }
+
+}
+/*================ GLASS  =================*/
+.glass-form {
+
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+    padding: 26px;
+
+    box-sizing: border-box;
+
+    border-radius: 26px;
+
+    background: rgba(255,255,255,.05);
+
+    border: 1px solid rgba(183,121,55,.18);
+
+    backdrop-filter: blur(22px);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+
+/* اللمعة */
+
+.glass-form:hover {
+
+    border-color: rgba(183,121,55,.25);
+
+    box-shadow:
+        0 22px 55px rgba(183,121,55,.12);
+}
+
+
+/* عنوان داخل البوكس */
+
+.glass-form h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+.glass-form p {
+
+    text-align: center;
+
+    opacity: .75;
+
+    margin-bottom: 22px;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* textarea */
+
+.glass-form textarea,
+#orderText {
+
+    width: 100%;
+
+    min-height: 180px;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    resize: vertical;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.045);
+
+    border: 1px solid rgba(183,121,55,.50);
+
+    backdrop-filter: blur(20px);
+
+    color: var(--primary);
+
+    opacity: .6;
+    font-family: "Cairo", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    outline: none;
+
+    transition:
+        all .45s cubic-bezier(.22,1,.36,1);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+
+.glass-form textarea::placeholder,
+#orderText::placeholder {
+
+    color: rgba(133,73,4,.948);
+
+    transition: .35s;
+}
+
+
+.glass-form textarea:hover,
+#orderText:hover {
+
+    border-color: rgba(183,121,55,.55);
+    background-position: -120% 0;
+}
+
+
+.glass-form textarea:focus,
+#orderText:focus {
+
+    border-color: var(--primary);
+
+background-color: rgba(255,255,255,.06);
+    box-shadow:
+        0 0 40px rgba(183,121,55,.15),
+        0 15px 45px rgba(0,0,0,.18);
+
+    transform: translateY(-2px);
+}
+
+
+.glass-form textarea:focus::placeholder,
+#orderText:focus::placeholder {
+
+    opacity: .18;
+}
+
+/*  لمعة الـ Textarea */
+
+#orderText {
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            transparent 35%,
+            rgba(255,255,255,.13) 50%,
+            transparent 65%
+        );
+
+    background-size: 250% 100%;
+    background-position: 120% 0;
+}
+/*================ DETAILS =================*/
+
+.details-section{
+
+max-width:1100px;
+
+margin:center;
+
+padding:0 20px 90px;
+
+}
+
+
+/*================ UPLOAD =================*/
+
+.upload-section{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:0 20px 90px;
+
+}
+
+.upload-box{
+
+display:block;
+
+padding:60px 35px;
+
+border:2px dashed rgba(183,121,55,.28);
+
+border-radius:30px;
+
+background:rgba(255,255,255,.04);
+
+backdrop-filter:blur(18px);
+
+cursor:pointer;
+
+overflow:hidden;
+
+position:relative;
+
+transition:all .45s cubic-bezier(.22,1,.36,1);
+
+box-shadow:
+
+inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+.upload-box::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:120%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.08),
+transparent
+);
+
+transition:.8s;
+
+}
+
+.upload-box:hover{
+
+border-color:var(--primary);
+
+background:rgba(183,121,55,.06);
+
+transform:translateY(-5px) scale(1.01);
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.18),
+
+0 0 35px rgba(183,121,55,.12);
+
+}
+
+.upload-box:hover::before{
+
+left:120%;
+
+}
+
+.upload-content{
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.upload-box:hover .upload-content{
+
+transform:translateY(-3px);
+
+}
+
+.upload-content svg{
+
+width:56px;
+
+height:56px;
+
+stroke:var(--primary);
+
+margin-bottom:18px;
+
+transition:.4s;
+
+}
+
+.upload-box:hover svg{
+
+transform:scale(1.08);
+
+}
+
+.upload-content h3{
+
+margin-bottom:10px;
+
+font-size:16px;
+
+}
+
+.upload-content span{
+
+opacity:.65;
+
+}
+
+.file-list{
+
+margin-top:25px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.file-item{
+
+padding:15px 20px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(183,121,55,.18);
+
+font-size:14px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+/*================ SECTION TITLE =================*/
+
+.section-title{
+
+    position:relative;
+
+    display:block;
+
+    width:100%;
+
+    padding-bottom:10px;
+
+    margin:0 auto 10px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:var(--primary);
+
+}
+
+.section-title::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:0;
+
+transform:translateX(-50%);
+
+width:80px;
+height:2px;
+
+border-radius:50px;
+
+background:linear-gradient(
+90deg,
+transparent,
+var(--primary),
+transparent
+);
+
+}
+/*==========================================
+            WIZARD STEPS
+==========================================*/
+.wizard-stage {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* نفس البوكس لكل خطوات الطلب */
+.wizard-step {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 36px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+
+
+/* الخطوة غير النشطة */
+.wizard-step:not(.active) {
+    display: none;
+}
+
+
+/* الخطوة الحالية */
+.wizard-step.active {
+    display: block;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+
+    animation:
+        fadeWizard .55s cubic-bezier(.22, 1, .36, 1);
+}
+
+@keyframes fadeWizard{
+
+from{
+
+opacity:0;
+
+transform:translateY(35px) scale(.96);
+
+filter:blur(8px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+filter:blur(0);
+
+}
+
+}
+/*================ input =================*/
+
+
+
+.input-group{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.input-group label{
+
+margin-bottom:10px;
+
+font-size:15px;
+
+opacity:.8;
+
+}
+
+.input-group input{
+
+height:50px;
+
+padding:0 16px;
+
+border-radius:16px;
+
+border:1px solid rgba(183,121,55,.18);
+
+background:rgba(255,255,255,.05);
+
+color:var(--primary);
+
+font-family:"Cairo",sans-serif;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.input-group input:focus{
+
+border-color:var(--primary);
+
+box-shadow:0 0 20px rgba(183,121,55,.15);
+
+}
+
+.send-btn{
+
+position:relative;
+
+overflow:hidden;
+
+width:100%;
+
+height:64px;
+
+margin-top:0px;
+
+border:none;
+
+border-radius:22px;
+
+cursor:pointer;
+
+font-size:14px;
+
+font-family:"Cairo",sans-serif;
+
+font-weight:700;
+
+letter-spacing:.3px;
+
+color:var(--primary);
+
+background:rgba(255,255,255,.045);
+
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(183,121,55,.16);
+
+transition:all .45s cubic-bezier(.22,1,.36,1);
+box-shadow:
+    0 0 20px rgba(183,121,55,.28),
+    0 10px 30px rgba(183,121,55,.18);
+
+}
+
+.send-btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:120%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.28),
+transparent
+);
+
+transition:.8s;
+
+}
+
+.send-btn:hover{
+
+transform:translateY(-5px) scale(1.015);
+
+box-shadow:
+
+0 18px 45px rgba(183,121,55,.35),
+
+0 0 30px rgba(212,161,93,.18);
+
+}
+
+.send-btn:hover::before{
+
+left:120%;
+
+}
+
+.send-btn:active{
+
+transform:scale(.97);
+
+}
+
+
+
+/*================ SUCCESS =================*/
+.success-logo{
+
+    width:120px;
+    max-width:60%;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 18px;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(0 0 12px rgba(183,121,55,.18));
+
+}
+
+.success-popup{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(8px);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
+z-index:99999;
+
+}
+
+.success-popup.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+.success-card{
+
+width:min(90%,520px);
+
+padding:45px;
+
+border-radius:30px;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(183,121,55,.22);
+
+backdrop-filter:blur(24px);
+
+}
+
+.success-icon{
+
+width:82px;
+
+height:82px;
+
+margin:auto;
+
+margin-bottom:24px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:34px;
+
+background:rgba(183,121,55,.15);
+
+color:#D4A15D;
+
+}
+
+.success-card p{
+
+line-height:2;
+font-size:15px;
+
+opacity:.8;
+
+margin-bottom:35px;
+
+}
+
+.success-buttons{
+
+display:flex;
+
+gap:15px;
+
+}
+
+.success-buttons a{
+
+flex:1;
+
+padding:15px;
+
+border-radius:16px;
+
+text-decoration:none;
+
+text-align:center;
+
+color:var(--primary);
+
+background:rgba(183,121,55,.18);
+
+border:1px solid rgba(183,121,55,.25);
+
+transition:.3s;
+
+}
+
+.success-buttons a:hover{
+
+transform:translateY(-3px);
+
+background:rgba(183,121,55,.28);
+
+}
+
+@media(max-width:768px){
+
+.success-buttons{
+
+flex-direction:column;
+
+}
+
+}
+
+@keyframes heroFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.order-steps{
+
+gap:0;
+
+}
+
+.step-line{
+
+width:28px;
+
+margin:0 6px;
+
+}
+
+.step p{
+
+font-size:11px;
+
+}
+
+.step-dot{
+
+width:10px;
+
+height:10px;
+
+}
+
+}
+
+/*==========================================
+            WIZARD BUTTONS
+==========================================*/
+
+.wizard-buttons{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:35px;
+
+gap:15px;
+
+}
+
+.next-btn,
+.back-btn{
+
+height:54px;
+
+padding:0 30px;
+
+border:none;
+
+border-radius:16px;
+
+font-family:"Cairo",sans-serif;
+
+font-size:13px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+.next-btn{
+
+height:54px;
+
+padding:0 30px;
+
+border:none;
+
+border-radius:16px;
+
+font-family:"Cairo",sans-serif;
+
+font-size:13px;
+
+font-weight:600;
+
+cursor:pointer;
+
+color:#906204;
+background:rgba(255,255,255,.045);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+border:1px solid rgba(183,121,55,.16);
+
+transition:.35s;
+
+}
+
+.next-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 30px rgba(183,121,55,.25);
+
+}
+
+.back-btn{
+
+background:rgba(255,255,255,.045);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(183,121,55,.18);
+
+color:var(--text-secondary);
+
+}
+
+.back-btn:hover{
+
+background:rgba(255,255,255,.08);
+
+border-color:var(--primary);
+
+color:var(--primary);
+
+}
+
+@media(max-width:768px){
+
+.wizard-buttons{
+
+flex-direction:column;
+
+}
+
+.next-btn,
+.back-btn{
+
+width:100%;
+
+}
+
+}
+
+/*==============================
+      STEP TRANSITIONS
+==============================*/
+
+.service-section.hide{
+
+opacity:0;
+
+transform:translateY(-30px);
+
+filter:blur(8px);
+
+pointer-events:none;
+
+transition:
+
+opacity .55s ease,
+
+transform .55s ease,
+
+filter .55s ease;
+
+}
+
+
+.service-card.fade-out{
+
+opacity:0;
+
+transform:scale(.88) translateY(20px);
+
+filter:blur(3px);
+
+pointer-events:none;
+
+transition:
+
+opacity .45s ease,
+
+transform .45s ease,
+
+filter .45s ease;
+
+}
+
+/*================ SELECTED SERVICE =================*/
+.selected-service-text{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin:0 0 8px;
+
+    font-family:"Cairo",sans-serif;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+.selected-service-text i{
+
+    font-size:13px;
+
+    color:var(--primary);
+
+}
+/*================ WIZARD  =================*/
+
+.wizard-container{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:0 20px 100px;
+
+}
+
+
+.details-title{
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:20px;
+
+text-align:center;
+
+color:#975703;
+
+}
+
+.details-tip{
+
+margin-top:18px;
+
+font-size:13px;
+
+text-align:center;
+
+line-height:1.9;
+
+}
+
+.upload-note{
+
+display:block;
+
+margin-top:16px;
+
+font-size:11px;
+
+letter-spacing:2px;
+
+opacity:.45;
+
+text-transform:uppercase;
+
+}
+
+.preview-image{
+
+width:44px;
+
+height:44px;
+
+border-radius:12px;
+
+object-fit:cover;
+
+display:block;
+
+}
+.upload-box.dragging{
+
+transform:scale(1.03);
+
+border-color:var(--primary);
+
+background:rgba(183,121,55,.10);
+
+box-shadow:
+
+0 0 45px rgba(183,121,55,.22);
+
+}
+
+.upload-box.dragging .upload-content{
+
+transform:scale(1.04);
+
+}
+.success-tag{
+
+display:inline-block;
+
+padding:8px 18px;
+
+margin-bottom:18px;
+
+border-radius:999px;
+
+background:rgba(183,121,55,.10);
+
+border:1px solid rgba(183,121,55,.18);
+
+color:var(--primary);
+
+font-size:13px;
+
+letter-spacing:1px;
+
+font-weight:700;
+
+}
+.error-msg{
+
+display:block;
+
+margin-top:8px;
+
+font-size:13px;
+
+color:#f31515;
+
+opacity:0;
+
+transform:translateY(-4px);
+
+transition:.3s;
+
+min-height:18px;
+
+}
+
+.error-msg.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ================= CONTACT FORM INPUTS ================= */
+
+.glass-form .form-group {
+    margin-bottom: 20px;
+}
+
+
+.glass-form .form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--primary);
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.glass-form .form-group input {
+
+    width: 100%;
+
+    height: 54px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.045);
+
+    border: 1px solid rgba(183,121,55,.16);
+
+    backdrop-filter: blur(20px);
+
+    color: var(--primary);
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        all .4s cubic-bezier(.22,1,.36,1);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+
+.glass-form .form-group input::placeholder {
+
+    color: rgba(133,73,4,.65);
+
+    transition: .35s;
+}
+
+
+.glass-form .form-group input:hover {
+
+    border-color:
+        rgba(183,121,55,.30);
+}
+
+
+.glass-form .form-group input:focus {
+
+    border-color: var(--primary);
+
+    background: rgba(255,255,255,.07);
+
+    box-shadow:
+        0 0 30px rgba(183,121,55,.12),
+        0 12px 35px rgba(0,0,0,.12);
+
+    transform: translateY(-2px);
+}
+
+
+.glass-form .form-group input:focus::placeholder {
+
+    opacity: .15;
+}
+.wizard-step .glass-form {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 30px auto 0;
+    padding: 0;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 0;
+
+    box-shadow: none;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    overflow: visible;
+}
+
+/*================ WIZARD RESPONSIVE =================*/
+@media (max-width: 768px) {
+    .wizard-step {
+        padding: 22px;
+        border-radius: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wizard-step {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>معرض برقة الورد</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gallery.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<!-- الخلفية -->
+<div class="bg-layer"></div>
+<div class="bg-shine"></div>
+
+<!-- Floating Back Button -->
+
+<a href="design.html" class="gallery-back">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="22"
+         height="22"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round">
+
+        <path d="M15 18l-6-6 6-6"/>
+
+    </svg>
+
+    <span data-key="backDesign">
+        العودة للتصاميم
+    </span>
+
+</a>
+
+<!-- HERO -->
+<section class="gallery-hero">
+
+<h1 id="galleryTitle" data-key="galleryTitle">
+ معرض برقة الورد 
+</h1>
+
+<p id="galleryDesc" data-key="galleryDesc">
+لحظات صُممت لتبقى
+</p>
+
+<span id="galleryCount" class="gallery-count"></span>
+
+</section>
+
+<!-- GRID -->
+<div class="gallery-filter" id="galleryFilter"></div>
+
+<div class="gallery-section-info" id="gallerySectionInfo">
+    <p id="gallerySectionDescription"></p>
+</div>
+
+<section class="gallery-grid" id="galleryGrid">
+
+<!-- الصور تُحمّل هنا بالجافاسكربت -->
+
+</section>
+
+<div class="empty-gallery" id="emptyGallery">
+
+    <span>✦</span>
+
+    <h2 data-key="emptyTitle">
+لا توجد أعمال في هذا القسم حالياً
+</h2>
+
+<p data-key="emptyText">
+نعمل حالياً على إضافة أعمال جديدة لهذا القسم.
+</p>
+
+    <span>✦</span>
+
+</div>
+<!-- ================= VIEWER ================= -->
+
+<div class="viewer" id="viewer">
+
+    <div class="viewer-backdrop"></div>
+
+    <div class="viewer-container">
+
+        <button class="viewer-close" id="viewerClose">
+
+            ✕
+
+        </button>
+
+        <button class="viewer-arrow left" id="viewerPrev">
+
+            ❮
+
+        </button>
+
+        <div class="viewer-image">
+
+            <img id="viewerImg" src="" alt="">
+
+        </div>
+
+        <div class="viewer-info">
+
+            <span id="viewerCategory"></span>
+
+            <h2 id="viewerTitle"></h2>
+
+            <p id="viewerDescription"></p>
+
+        </div>
+
+        <button class="viewer-arrow right" id="viewerNext">
+
+            ❯
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script src="gallery-data.js"></script>
+
+<script src="gallery.js"></script>
+
+</body>
+</html>
