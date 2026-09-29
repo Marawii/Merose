@@ -13,7 +13,22 @@ const designTrans = {
   videosDesc: "مونتاج وموشن جرافيك",
 
   ai: "الذكاء الاصطناعي",
-  aiDesc: "أعمال إبداعية تم إنشاؤها باستخدام الذكاء الاصطناعي"
+  aiDesc: "أعمال إبداعية تم إنشاؤها باستخدام الذكاء الاصطناعي",
+
+  latestTitle: "آخر ما صنع برقة الورد",
+allWorks: "عرض جميع الأعمال",
+
+valuesTitle: "بصمتنا في كل تصميم",
+valuesSubtitle: "لأن التفاصيل الصغيرة هي التي تصنع الفرق الكبير.",
+
+customDesigns: "تصاميم مخصصة",
+customDesignsDesc: "كل تصميم يُنفذ بعناية ليتناسب مع هويتك، ويعكس فكرتك بأسلوب راقٍ ومميز.",
+
+fastExecution: "سرعة في التنفيذ",
+fastExecutionDesc: "تنفيذ سريع مع المحافظة على أعلى جودة، مع الالتزام بالمواعيد المتفق عليها.",
+
+attentionToDetail: "الاهتمام بالتفاصيل",
+attentionToDetailDesc: "نهتم بأدق التفاصيل لنمنح كل تصميم لمسة فريدة تليق ببرقة الورد."
 
 },
 
@@ -30,7 +45,21 @@ const designTrans = {
   videosDesc: "Video Editing & Motion Graphics",
 
   ai: "Artificial Intelligence",
-  aiDesc: "Creative works powered by Artificial Intelligence"
+  aiDesc: "Creative works powered by Artificial Intelligence",
+  latestTitle: "Latest Creations by Barqat Alward",
+allWorks: "View All Works",
+
+valuesTitle: "Our Signature in Every Design",
+valuesSubtitle: "Because the smallest details make the biggest difference.",
+
+customDesigns: "Custom Designs",
+customDesignsDesc: "Every design is carefully crafted to suit your identity and bring your idea to life with elegance and distinction.",
+
+fastExecution: "Fast Execution",
+fastExecutionDesc: "Fast delivery while maintaining high quality and staying committed to agreed deadlines.",
+
+attentionToDetail: "Attention to Detail",
+attentionToDetailDesc: "We care about every detail to give each design a unique touch worthy of Barqat Alward."
 
 }
 

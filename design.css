@@ -313,13 +313,14 @@ flex: 0 0 var(--latest-card-width);
 
 .latest-btn a {
     display: inline-block;
-    padding: 14px 30px;
+    padding: 11px 24px;
     border: 1px solid rgba(183,121,55,.35);
     border-radius: 50px;
     background: rgba(255,255,255,.05);
     color: var(--primary);
     text-decoration: none;
     backdrop-filter: blur(16px);
+    font-size: 13px;
     transition: .35s;
 }
 
@@ -353,6 +354,11 @@ flex: 0 0 var(--latest-card-width);
     }
 }
 
+.latest-btn a {
+    padding: 9px 20px;
+    font-size: 11px;
+}
+
 /*==============================
            TITLE
 ==============================*/
@@ -361,7 +367,7 @@ flex: 0 0 var(--latest-card-width);
 
 font-family:"Alexandria",sans-serif;
 
-font-size:34px;
+font-size:28px;
 
 font-weight:700;
 
@@ -499,9 +505,9 @@ opacity:1;
 
 .value-head h3{
 
-font-family:"Alexandria",sans-serif;
+font-family:inherit;
 
-font-size:18px;
+font-size:14px;
 
 font-weight:600;
 
@@ -757,4 +763,18 @@ body.lightbox-open {
 #categories {
     scroll-margin-top: 120px;
 }
+@media (max-width:1024px){
 
+    .value-title{
+        font-size:24px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .value-title{
+        font-size:22px;
+    }
+
+}
