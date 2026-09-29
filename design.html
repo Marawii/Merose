@@ -63,142 +63,29 @@ content="استعرض أعمال ميروز في تصميم الدعوات، ا�
 
 </header>
 
-<!-- ================= CATEGORIES ================= -->
 
-<section class="home-boxes design-boxes">
-
-    <a
-        href="gallery.html?type=photos"
-        class="box"
-        aria-label="معرض الصور">
-
-        <i data-lucide="image" class="box-icon"></i>
-
-        <span data-key="photos">
-
-            معرض الصور
-
-        </span>
-
-        <p data-key="photosDesc">
-
-            دعوات ومناسبات
-
-        </p>
-
-    </a>
-
-    <a
-        href="gallery.html?type=videos"
-        class="box"
-        aria-label="معرض الفيديو">
-
-        <i data-lucide="clapperboard" class="box-icon"></i>
-
-        <span data-key="videos">
-
-            معرض الفيديو
-
-        </span>
-
-        <p data-key="videosDesc">
-
-            مونتاج احترافي
-
-        </p>
-
-    </a>
-
-    <a
-        href="gallery.html?type=ai"
-        class="box"
-        aria-label="معرض الذكاء الاصطناعي">
-
-        <i data-lucide="sparkles" class="box-icon"></i>
-
-        <span data-key="ai">
-
-            الذكاء الاصطناعي
-
-        </span>
-
-        <p data-key="aiDesc">
-
-            إبداع بلا حدود
-
-        </p>
-
-    </a>
-
-</section>
 <!-- ================= FEATURED WORK ================= -->
 
-<section class="glass-section latest-work">
-
-    <h2>
-
-                  مختارات برقة الورد 
-
-    </h2>
-
+<section class="latest-work">
     <p>
 
-        مجموعة منتقاة من أبرز أعمالنا.
+   آخر ما صنع برقة الورد
 
     </p>
+<div class="latest-grid" id="latestGrid">
 
-    <div class="latest-grid">
+</div>
 
-        <a
-            href="gallery.html?type=photos"
-            class="latest-card"
-            aria-label="عرض التصميم الأول">
-
-            <img
-                src="images/gallery/photos/1.jpg"
-                alt="تصميم من أعمال برقة الورد"
-                loading="lazy"
-                decoding="async">
-
-        </a>
-
-        <a
-            href="gallery.html?type=photos"
-            class="latest-card"
-            aria-label="عرض التصميم الثاني">
-
-            <img
-                src="images/gallery/photos/2.jpg"
-                alt="تصميم من أعمال برقة الورد"
-                loading="lazy"
-                decoding="async">
-
-        </a>
-
-        <a
-            href="gallery.html?type=photos"
-            class="latest-card"
-            aria-label="عرض التصميم الثالث">
-
-            <img
-                src="images/gallery/photos/3.jpg"
-                alt="تصميم من أعمال برقة الورد"
-                loading="lazy"
-                decoding="async">
-
-        </a>
-
-    </div>
 
     <div class="latest-btn">
 
-        <a
-            href="gallery.html?type=photos"
-            aria-label="عرض جميع الأعمال">
+      <a
+    href="#categories"
+    aria-label="عرض جميع الأعمال">
 
-            عرض جميع الأعمال 
+    عرض جميع الأعمال 
 
-        </a>
+</a>
 
     </div>
 
@@ -271,7 +158,73 @@ content="استعرض أعمال ميروز في تصميم الدعوات، ا�
 
 </section>
 
+<!-- ================= CATEGORIES ================= -->
 
+<section class="home-boxes design-boxes" id="categories">
+    <a
+        href="gallery.html?type=photos"
+        class="box"
+        aria-label="معرض الصور">
+
+        <i data-lucide="image" class="box-icon"></i>
+
+        <span data-key="photos">
+
+            معرض الصور
+
+        </span>
+
+        <p data-key="photosDesc">
+
+            دعوات ومناسبات
+
+        </p>
+
+    </a>
+
+    <a
+        href="gallery.html?type=videos"
+        class="box"
+        aria-label="معرض الفيديو">
+
+        <i data-lucide="clapperboard" class="box-icon"></i>
+
+        <span data-key="videos">
+
+            معرض الفيديو
+
+        </span>
+
+        <p data-key="videosDesc">
+
+            مونتاج احترافي
+
+        </p>
+
+    </a>
+
+    <a
+        href="gallery.html?type=ai"
+        class="box"
+        aria-label="معرض الذكاء الاصطناعي">
+
+        <i data-lucide="sparkles" class="box-icon"></i>
+
+        <span data-key="ai">
+
+            الذكاء الاصطناعي
+
+        </span>
+
+        <p data-key="aiDesc">
+
+            إبداع بلا حدود
+
+        </p>
+
+    </a>
+
+</section>
 <!-- ================= THEME SWITCH ================= -->
  
 <div class="theme-switch" onclick="toggleTheme()">
@@ -287,6 +240,8 @@ content="استعرض أعمال ميروز في تصميم الدعوات، ا�
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script src="script.js"></script>
+
+    <script src="gallery-data.js"></script>
 
     <script src="design.js"></script>
 
